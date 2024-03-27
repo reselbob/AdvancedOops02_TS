@@ -1,7 +1,8 @@
 import {IWebDocument} from "./IWebDocument";
 
-export interface IWebConfirmation extends IWebDocument{
+export interface IWebConfirmation{
   timeStamp: Date;
   documentId: string;
   title: string;
+  url: string;
 }

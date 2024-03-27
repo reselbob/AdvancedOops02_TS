@@ -2,6 +2,8 @@ import {Randomizer} from "./randomizer/Randomizer";
 import {DocumentProcessor} from "./document/DocumentProcessor";
 import {IWebDocument} from "./document/interfaces/IWebDocument";
 import {IPrintDocument} from "./document/interfaces/IPrintDocument";
+import {IWebConfirmation} from "./document/interfaces/IWebConfirmation";
+import {IPrintConfirmation} from "./document/interfaces/IPrintConfirmation";
 
 const webDocument: IWebDocument = Randomizer.getWebDocument();
 const printDocument: IPrintDocument = Randomizer.getPrintDocument()

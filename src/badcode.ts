@@ -1,3 +1,4 @@
-const arr = new Array<string>();
+const numArr = new Array<number>();
 
-arr.push(5);
+numArr.push(1);
+numArr.push('one');

@@ -36,11 +36,8 @@ export class Randomizer {
     };
   }
 
-  public static getRandomMessage(): string {
-    return faker.hacker.phrase();
-  }
-
-  public static getDocument(): IDocument{
+  
+  public static getRandomDocument(): IDocument{
     return {
       id: uuidv4(),
       title: faker.lorem.words(4),
@@ -50,16 +47,16 @@ export class Randomizer {
 
   }
 
-  public static getWebDocument(): IWebDocument{
-    const document = this.getDocument();
+  public static getRandomWebDocument(): IWebDocument{
+    const document = this.getRandomDocument();
     return {
       ...document,
       url: faker.internet.url({ appendSlash: true })
     }
   }
 
-  public static getPrintDocument(): IPrintDocument{
-    const document = this.getDocument();
+  public static getRandomPrintDocument(): IPrintDocument{
+    const document = this.getRandomDocument();
     return {
       ...document,
       pageCount: faker.number.int({ min: 10, max: 100 })

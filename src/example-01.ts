@@ -3,8 +3,14 @@ import {DocumentProcessorV1} from "./document/DocumentProcessorV1";
 import {IWebDocument} from "./document/interfaces/IWebDocument";
 import {IPrintDocument} from "./document/interfaces/IPrintDocument";
 
-const webDocument: IWebDocument = Randomizer.getWebDocument();
-const printDocument: IPrintDocument = Randomizer.getPrintDocument()
+/**
+ * The purpose of this file is demonstrate how to
+ * program a custom class the uses generics. The custom
+ * class is DocumentProcessorV1<T extends IWebDocument | IPrintDocument>
+ */
+
+const webDocument: IWebDocument = Randomizer.getRandomWebDocument();
+const printDocument: IPrintDocument = Randomizer.getRandomPrintDocument()
 
 const webProcessor =
   new DocumentProcessorV1<IWebDocument>(webDocument);

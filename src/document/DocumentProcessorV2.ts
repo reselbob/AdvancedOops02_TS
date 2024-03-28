@@ -3,6 +3,18 @@ import {IPrintDocument} from "./interfaces/IPrintDocument";
 import {IWebConfirmation} from "./interfaces/IWebConfirmation";
 import {IPrintConfirmation} from "./interfaces/IPrintConfirmation";
 
+/**
+ * The purpose of this class is to demonstrate how to create
+ * a class implements two generic types T and V.
+ *
+ * Type T defines the generic that represents to the interface
+ * of the document to pass a parameter in the process() method.
+ *
+ * Type V represents the confirmation type that is returned when
+ * executing the process() method.
+ *
+ * Both T and V are constrained generic types
+ */
 export class DocumentProcessorV2<T extends IWebDocument | IPrintDocument,
                     V extends IWebConfirmation | IPrintConfirmation> {
   public process(document: T): V | undefined {

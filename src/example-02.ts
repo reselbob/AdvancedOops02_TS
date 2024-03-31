@@ -1,35 +1,18 @@
-import {Randomizer} from "./randomizer/Randomizer";
-import {DocumentProcessorV2} from "./document/DocumentProcessorV2";
 import {IWebDocument} from "./document/interfaces/IWebDocument";
+import {Randomizer} from "./randomizer/Randomizer";
 import {IPrintDocument} from "./document/interfaces/IPrintDocument";
-import {IWebConfirmation} from "./document/interfaces/IWebConfirmation";
-import {IPrintConfirmation} from "./document/interfaces/IPrintConfirmation";
+import {DocumentProcessorV2} from "./document/DocumentProcessorV2";
+
 /**
- * The purpose of this file is to demonstrate how to
- * program a class that takes two generic types.
- *
- * One type T represents an implementation of the interface
- * for the document to process.
- *
- * The other type V represents the interface that specifies
- * the implementation of the confirmation object returned
- * be the process() method of the DocumentProcessorV2 class.
+ * The purpose of this file is to demonstrate how to use
+ * a class the declares a generic at the method level
  */
 
 const webDocument: IWebDocument = Randomizer.getRandomWebDocument();
 const printDocument: IPrintDocument = Randomizer.getRandomPrintDocument()
 
-const webProcessor =
-  new DocumentProcessorV2<IWebDocument, IWebConfirmation>();
+const webProcessor = new DocumentProcessorV2();
+webProcessor.process<IWebDocument>(webDocument);
 
-const webResult = webProcessor.process(webDocument);
-console.log({webResult})
-
-
-const printProcessor =
-  new DocumentProcessorV2<IPrintDocument, IPrintConfirmation>();
-const printResult =  printProcessor.process(printDocument);
-console.log({printResult})
-
-
-
+const printProcessor = new DocumentProcessorV2();
+printProcessor.process<IPrintDocument>(printDocument);

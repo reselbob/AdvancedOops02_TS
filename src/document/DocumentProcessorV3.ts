@@ -42,8 +42,6 @@ export class DocumentProcessorV3<T extends IWebDocument | IPrintDocument,
         pageCount: d.pageCount
       }
       return confirm as V;
-    } else {
-      throw new Error('Unsupported type for DocumentProcessor:')
     }
   }
 }

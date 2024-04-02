@@ -19,7 +19,6 @@ of an `IWebDocument` or an `IPrintDocument` interface.
 This project has the following requirements
 
 - Node.js and npm need to be installed on the machine running the project.
-- Typescript needs to be installed too,
 
 # Getting the code up and running
 

@@ -5,7 +5,7 @@ import {DocumentProcessorV2} from "./document/DocumentProcessorV2";
 
 /**
  * The purpose of this file is to demonstrate how to use
- * a class the declares a generic at the method level
+ * a class the declares a generic variable at the method level
  */
 
 const webDocument: IWebDocument = Randomizer.getRandomWebDocument();

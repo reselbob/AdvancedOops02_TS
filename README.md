@@ -39,13 +39,28 @@ exercised is [`DocumentProcessorV1`](./src/document/DocumentProcessorV1.ts).
 npx ts-node ./src/example-01.ts
 ```
 
+You'll get output similar to the following:
+
+```text
+Processing as a web document: https://incompatible-nickname.org/
+Processing as a print document with page count: 39
+```
+
+
 ## Exercising a class that declares a generic variable at the method level
 
 You can view the code that the following instruction exercises [here](./src/example-02.ts).
 The class being exercised is [`DocumentProcessorV2`](./src/document/DocumentProcessorV2.ts).
 
-```javascript
+```bash
 npx ts-node ./src/example-02.ts
+```
+
+You'll output similar to the following:
+
+```text
+Processing as a web document: https://tender-sweatshop.name/
+Processing as a print document with page count: 95
 ```
 
 ## Exercising a class that uses two generic variables
@@ -57,8 +72,33 @@ class method that processes the document.
 
 The class being exercised is [`DocumentProcessorV3`](./src/document/DocumentProcessorV3.ts).
 
-```javascript
+```bash
 npx ts-node ./src/example-03.ts
+```
+
+You'll get output similar to the following:
+
+
+```text
+Processing as a web document: https://eager-loop.name/
+{
+  webResult: {
+    timeStamp: 2024-03-31T12:56:21.520Z,
+    documentId: '6e0a6c5c-3821-4eb3-88d7-60019e639883',
+    title: 'causa amitto arceo tenetur',
+    url: 'https://eager-loop.name/'
+  }
+}
+Processing as a print document with page count: 28
+{
+  printResult: {
+    timeStamp: 2024-03-31T12:56:21.525Z,
+    documentId: '64d0d367-c289-485f-bc46-b05b9810e460',
+    title: 'caterva absum adnuo quos',
+    pageCount: 28
+  }
+}
+
 ```
 
 

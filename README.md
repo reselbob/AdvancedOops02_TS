@@ -8,7 +8,7 @@ various ways. The document processing classes are `DocumentProcessorV1`, `Docume
 
 - [`DocumentProcessorV1`](./src/document/DocumentProcessorV1.ts) is an example of using a single generic variable `T` that represents the document to process.  The
 generic variable `T` is constrained to accept only an implementation of an `IWebDocument` or an `IPrintDocument` interface.
-- [`DocumentProcessorV2`](./src/document/DocumentProcessorV2.ts) is an example of using a generic variable atß the class's method level only.
+- [`DocumentProcessorV2`](./src/document/DocumentProcessorV2.ts) is an example of using a generic variable at the class's method level only.
 - [`DocumentProcessorV3`](./src/document/DocumentProcessorV2.ts) is an example of using two generic variables, `T` and `V`. Generic variable `T` represents the document
 to be processes. The generic variable `V` represents a confirmation of type `IWebConfirmation` or `IPrintConfirmation`. The confirmation
 is returned by the class's `process(document: T) : V` method. The generic variable `T` is constrained to accept only an implementation
